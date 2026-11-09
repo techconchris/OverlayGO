@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OverlayGO — Guía OBS Studio</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20fill%3D%22%2300F0FF%22%20height%3D%22800px%22%20width%3D%22800px%22%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20%0D%0A%09%20viewBox%3D%220%200%20512%20512%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cg%20transform%3D%22translate(1%201)%22%3E%0D%0A%09%3Cg%3E%0D%0A%09%09%3Cg%3E%0D%0A%09%09%09%3Cpath%20d%3D%22M455.828%2C440.379H347.929c27.389-10.951%2C48.357-26.522%2C64.359-45.36c65.428-9.791%2C94.74-63.816%2C94.74-113.537%0D%0A%09%09%09%09c0-35.246-19.627-64.674-45.028-69.82c0.002-0.267%2C0.005-0.534%2C0.007-0.8c0-4.414-1.766-8.828-5.297-12.359%0D%0A%09%09%09%09c-2.648-3.531-7.945-5.297-12.359-5.297H241.317H38.283c-4.414%2C0-8.828%2C1.766-12.359%2C5.297%0D%0A%09%09%09%09c-3.531%2C3.531-5.297%2C7.945-5.297%2C12.359c0.684%2C94.343%2C17.253%2C190.802%2C114.078%2C229.517H25.924%0D%0A%09%09%09%09c-12.359%2C0-22.952%2C10.593-22.952%2C22.952c0%2C10.593%2C7.062%2C18.538%2C20.303%2C21.186l111.228%2C8.828c4.414%2C0%2C5.297%2C1.766%2C6.179%2C3.531%0D%0A%09%09%09%09c4.414%2C8.828%2C13.241%2C14.124%2C22.952%2C14.124h146.538c9.71%2C0%2C18.538-5.297%2C21.186-14.124c0.883-1.766%2C2.648-3.531%2C6.179-3.531%0D%0A%09%09%09%09l120.938-8.828h0.883c12.359-2.648%2C19.421-10.593%2C19.421-21.186C478.779%2C450.972%2C469.069%2C440.379%2C455.828%2C440.379z%0D%0A%09%09%09%09%20M488.49%2C281.483c0%2C34.428-15.89%2C75.917-60.028%2C90.924c26.483-43.255%2C31.779-96.221%2C33.545-142.124%0D%0A%09%09%09%09C477.014%2C235.579%2C488.49%2C256.766%2C488.49%2C281.483z%20M347.248%2C258.531l26.483%2C26.483v58.262h-52.966v-58.262L347.248%2C258.531z%0D%0A%09%09%09%09%20M38.283%2C210.862h203.034h97.103v31.779l-32.662%2C32.662c-1.766%2C1.766-2.648%2C3.531-2.648%2C6.179v70.621%0D%0A%09%09%09%09c0%2C5.297%2C3.531%2C8.828%2C8.828%2C8.828h70.621c5.297%2C0%2C8.828-3.531%2C8.828-8.828v-70.621c0-2.648-0.883-4.414-2.648-6.179%0D%0A%09%09%09%09l-32.662-32.662v-31.779h88.276c-0.883%2C119.172-26.483%2C229.517-203.034%2C229.517S39.166%2C330.034%2C38.283%2C210.862z%20M458.476%2C466.862%0D%0A%09%09%09%09l-120.055%2C8.828c-8.828%2C0.883-16.772%2C5.297-20.303%2C13.241c-1.766%2C2.648-4.414%2C4.414-7.062%2C4.414H163.634%0D%0A%09%09%09%09c-2.648%2C0-5.297-1.766-7.062-4.414c-3.531-7.945-11.476-12.359-20.303-13.241l-111.228-8.828%0D%0A%09%09%09%09c-4.414-0.883-4.414-2.648-4.414-3.531c0-2.648%2C2.648-5.297%2C5.297-5.297h431.669c2.648%2C0%2C5.297%2C2.648%2C5.297%2C5.297%0D%0A%09%09%09%09C462.89%2C464.214%2C462.89%2C465.979%2C458.476%2C466.862z%22%2F%3E%0D%0A%09%09%09%3Cpath%20d%3D%22M226.31%2C72.269c-13.241%2C13.241-20.303%2C26.483-20.303%2C40.607s7.062%2C28.248%2C20.303%2C42.372%0D%0A%09%09%09%09c1.766%2C1.766%2C3.531%2C2.648%2C6.179%2C2.648c1.766%2C0%2C4.414-0.883%2C6.179-2.648c3.531-3.531%2C3.531-8.828%2C0-12.359%0D%0A%09%09%09%09c-9.71-10.593-15.007-20.303-15.007-30.014s5.297-19.421%2C15.007-28.248c13.241-12.359%2C20.303-26.483%2C20.303-40.607%0D%0A%09%09%09%09c0-15.007-7.062-29.131-20.303-42.372c-3.531-3.531-8.828-3.531-12.359%2C0c-3.531%2C3.531-3.531%2C8.828%2C0%2C12.359%0D%0A%09%09%09%09c9.71%2C10.593%2C15.007%2C20.303%2C15.007%2C30.014S236.021%2C63.441%2C226.31%2C72.269z%22%2F%3E%0D%0A%09%09%09%3Cpath%20d%3D%22M332.241%2C72.269C319%2C85.51%2C311.938%2C98.752%2C311.938%2C112.876s7.062%2C28.248%2C20.303%2C42.372%0D%0A%09%09%09%09c1.766%2C1.766%2C3.531%2C2.648%2C6.179%2C2.648c1.766%2C0%2C4.414-0.883%2C6.179-2.648c3.531-3.531%2C3.531-8.828%2C0-12.359%0D%0A%09%09%09%09c-9.71-10.593-15.007-20.303-15.007-30.014s5.297-19.421%2C15.007-28.248c13.241-12.359%2C20.303-26.483%2C20.303-40.607%0D%0A%09%09%09%09c0-15.007-7.062-29.131-20.303-42.372c-3.531-3.531-8.828-3.531-12.359%2C0c-3.531%2C3.531-3.531%2C8.828%2C0%2C12.359%0D%0A%09%09%09%09c9.71%2C10.593%2C15.007%2C20.303%2C15.007%2C30.014S341.952%2C63.441%2C332.241%2C72.269z%22%2F%3E%0D%0A%09%09%09%3Cpath%20d%3D%22M138.034%2C72.269c-13.241%2C13.241-20.303%2C26.483-20.303%2C40.607s7.062%2C28.248%2C20.303%2C42.372%0D%0A%09%09%09%09c1.766%2C1.766%2C3.531%2C2.648%2C6.179%2C2.648c1.766%2C0%2C4.414-0.883%2C6.179-2.648c3.531-3.531%2C3.531-8.828%2C0-12.359%0D%0A%09%09%09%09c-9.71-10.593-15.007-20.303-15.007-30.014s5.297-19.421%2C15.007-28.248c13.241-12.359%2C20.303-26.483%2C20.303-40.607%0D%0A%09%09%09%09c0-15.007-7.062-29.131-20.303-42.372c-3.531-3.531-8.828-3.531-12.359%2C0c-3.531%2C3.531-3.531%2C8.828%2C0%2C12.359%0D%0A%09%09%09%09c9.71%2C10.593%2C15.007%2C20.303%2C15.007%2C30.014S147.745%2C63.441%2C138.034%2C72.269z%22%2F%3E%0D%0A%09%09%09%3Cpath%20d%3D%22M190.117%2C396.241c-62.676-10.593-94.455-45.903-107.697-116.524c-0.883-4.414-6.179-7.945-10.593-7.062%0D%0A%09%09%09%09c-4.414%2C0.883-7.945%2C6.179-7.062%2C10.593c14.124%2C78.565%2C52.083%2C118.29%2C121.821%2C130.648c0.883%2C0%2C0.883%2C0%2C1.766%2C0%0D%0A%09%09%09%09c4.414%2C0%2C7.945-2.648%2C8.828-7.062C198.062%2C401.538%2C194.531%2C397.124%2C190.117%2C396.241z%22%2F%3E%0D%0A%09%09%3C%2Fg%3E%0D%0A%09%3C%2Fg%3E%0D%0A%3C%2Fg%3E%0D%0A%3C%2Fsvg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        tech: ['Orbitron', 'sans-serif']
+                    },
+                    colors: {
+                        dark: '#0B0C10',
+                        darker: '#10161D',
+                        panel: '#1F2833',
+                        primary: '#66FCF1',
+                        mutedc: '#45A29E',
+                        lightc: '#C5C6C7'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darker text-lightc font-sans min-h-screen p-4 sm:p-8 flex items-center justify-center">
+
+    <div class="max-w-4xl w-full bg-panel border border-[rgba(102,252,241,0.2)] rounded-2xl shadow-[0_0_40px_rgba(102,252,241,0.08)] overflow-hidden">
+        <!-- Cabecera del Tutorial -->
+        <div class="bg-gradient-to-r from-[#0d2930] via-panel to-darker p-6 border-b border-[rgba(102,252,241,0.15)] flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-primary/10 border border-primary/30 p-3 rounded-xl text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                </div>
+                <div>
+                    <h1 class="text-xl sm:text-2xl font-bold tracking-wide text-white font-tech" data-es="Guia OverlayGO para OBS Studio" data-en="OverlayGO OBS Studio Guide">Guia OverlayGO para OBS Studio</h1>
+                    <p class="text-xs sm:text-sm text-mutedc" data-es="Integra tu overlay HTML y configura tu camara paso a paso." data-en="Set up your HTML overlay and camera step by step.">Integra tu overlay HTML y configura tu camara paso a paso.</p>
+                </div>
+            </div>
+            <!-- Toggle de idioma -->
+            <div class="flex items-center shrink-0">
+                <button type="button" onclick="toggleLang()" class="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-md border border-primary/40 bg-primary/10 text-primary text-xs sm:text-sm font-tech font-semibold tracking-widest hover:bg-primary/20 transition-colors" aria-label="Cambiar idioma">
+                    <span>🌐</span>
+                    <span class="lang-label">ES</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Cuerpo -->
+        <div class="p-6 sm:p-8 space-y-8">
+            
+            <!-- SECCION 1: El HTML Local en OBS -->
+            <div class="space-y-4">
+                <div class="flex items-center space-x-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/15 text-primary font-tech font-bold text-sm">1</span>
+                    <h2 class="text-lg sm:text-xl font-semibold text-white" data-es="Usar tu Overlay HTML (Archivo Local)" data-en="Using your HTML Overlay (Local File)">Usar tu Overlay HTML (Archivo Local)</h2>
+                </div>
+                
+                <p class="text-sm text-lightc/80 leading-relaxed" data-es="Exportaste tu overlay como un archivo HTML individual (y su mascara PNG). OBS puede leerlos directamente desde tu ordenador sin necesidad de subirlos a internet, garantizando fluidez total a 60 FPS." data-en="You exported your overlay as a single HTML file (plus its PNG mask). OBS can read them directly from your computer without uploading them online, guaranteeing smooth 60 FPS playback.">Exportaste tu overlay como un archivo HTML individual (y su mascara PNG). OBS puede leerlos directamente desde tu ordenador sin necesidad de subirlos a internet, garantizando fluidez total a 60 FPS.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Paso A -->
+                    <div class="bg-darker/60 border border-[rgba(102,252,241,0.12)] p-4 rounded-xl space-y-2">
+                        <div class="text-primary font-semibold text-sm flex items-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                            <span data-es="Agregar Fuente Navegador" data-en="Add Browser Source">Agregar Fuente Navegador</span>
+                        </div>
+                        <p class="text-xs text-lightc/60">
+                            <span data-es="En tu escena de OBS, ve al panel" data-en="In your OBS scene, go to the">En tu escena de OBS, ve al panel</span> <b class="text-lightc" data-es="Fuentes" data-en="Sources">Fuentes</b><span data-es=", haz clic en" data-en=", click">, haz clic en</span> <b class="text-lightc">+</b> <span data-es="y selecciona" data-en="and select">y selecciona</span> <b class="text-white" data-es="Navegador (Browser)" data-en="Browser">Navegador (Browser)</b>. <span data-es="Asignale un nombre descriptivo." data-en="Give it a descriptive name.">Asignale un nombre descriptivo.</span>
+                        </p>
+                    </div>
+
+                    <!-- Paso B -->
+                    <div class="bg-darker/60 border border-[rgba(102,252,241,0.12)] p-4 rounded-xl space-y-2">
+                        <div class="text-primary font-semibold text-sm flex items-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            <span data-es="Marcar Archivo Local" data-en="Mark Local File">Marcar Archivo Local</span>
+                        </div>
+                        <p class="text-xs text-lightc/60">
+                            <span data-es="En las propiedades de la fuente, marca" data-en="In the source properties, check">En las propiedades de la fuente, marca</span> <b class="text-white" data-es="Archivo local" data-en="Local file">Archivo local</b> <span data-es=". Luego haz clic en Explorar y busca tu archivo" data-en=". Then click Browse and find your">. Luego haz clic en Explorar y busca tu archivo</span> <code class="text-primary" data-es="OverlayGO-anchoXalto.html" data-en="OverlayGO-WidthxHeight.html">OverlayGO-anchoXalto.html</code>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Resolucion clave -->
+                <div class="bg-primary/5 border border-primary/20 p-4 rounded-xl flex items-start space-x-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#66FCF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                    <div class="text-xs text-primary/90 space-y-1.5">
+                        <p><b data-es="Dónde ver el tamaño para OBS:" data-en="Where to find the OBS size:">Dónde ver el tamaño para OBS:</b></p>
+                        <p><span data-es="Ve al panel de configuración &gt; sección Tamaño. Allí verás el &quot;Tamaño para OBS&quot; sugerido, que ya incluye el espacio necesario para el borde, anillo y glow. Puedes copiar el valor directamente con el botón." data-en="Go to the settings panel &gt; Size section. There you will see the suggested &quot;OBS source size&quot;, which already includes the space needed for the border, ring and glow. You can copy the value directly with the button.">Ve al panel de configuración &gt; sección Tamaño. Allí verás el &quot;Tamaño para OBS&quot; sugerido, que ya incluye el espacio necesario para el borde, anillo y glow. Puedes copiar el valor directamente con el botón.</span></p>
+                        <p><span data-es="Este dato también se incluye en el nombre del archivo descargado (ej. OverlayGO-950x750.html) y dentro del propio código. Importante: Usa este ancho y alto exactos en las propiedades de la Fuente de Navegador en OBS; si usas medidas más chicas, los efectos externos (como el glow) se verán recortados." data-en="This value is also included in the downloaded file name (e.g. OverlayGO-950x750.html) and inside the code itself. Important: use this exact width and height in the OBS Browser Source properties; if you use smaller dimensions, the outer effects (such as the glow) will be clipped.">Este dato también se incluye en el nombre del archivo descargado (ej. OverlayGO-950x750.html) y dentro del propio código. Importante: Usa este ancho y alto exactos en las propiedades de la Fuente de Navegador en OBS; si usas medidas más chicas, los efectos externos (como el glow) se verán recortados.</span></p>
+                    </div>
+                </div>
+
+                <!-- Capa de camara -->
+                <div class="bg-primary/5 border border-primary/20 p-4 rounded-xl flex items-start space-x-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#66FCF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                    <div class="text-xs text-primary/90">
+                        <span class="font-bold" data-es="Importante — Orden de capas:" data-en="Important — Layer order:">Importante — Orden de capas:</span>
+                        <span data-es=" Para que se vean el indicador REC, el texto del nickname, el glow y otros detalles internos del overlay, tu fuente de" data-en=" For the REC indicator, nickname text, glow and other internal overlay details to be visible, your"> Para que se vean el indicador REC, el texto del nickname, el glow y otros detalles internos del overlay, tu fuente de</span> <b data-es="camara" data-en="camera">camara</b> <span data-es="debe estar" data-en="source must be">debe estar</span> <b data-es="por debajo" data-en="below">por debajo</b> <span data-es=" de la fuente del overlay en la lista de fuentes de OBS. El overlay siempre va arriba." data-en=" the overlay source in OBS. The overlay always goes on top."> de la fuente del overlay en la lista de fuentes de OBS. El overlay siempre va arriba.</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-[rgba(102,252,241,0.1)]">
+
+            <!-- SECCION 2: Recorte y Mascara -->
+            <div class="space-y-4">
+                <div class="flex items-center space-x-3">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/15 text-primary font-tech font-bold text-sm">2</span>
+                    <h2 class="text-lg sm:text-xl font-semibold text-white" data-es="Ajuste, Recorte y Mascara de Camara" data-en="Camera Adjust, Crop and Mask">Ajuste, Recorte y Mascara de Camara</h2>
+                </div>
+                
+                <p class="text-sm text-lightc/80 leading-relaxed" data-es="Si tu camara es vertical (9:16) y sobresale de tu marco, o necesitas recortar margenes sobrantes, sigue este orden profesional:" data-en="If your camera is vertical (9:16) and sticks out of your frame, or you need to crop extra margins, follow this professional order:">Si tu camara es vertical (9:16) y sobresale de tu marco, o necesitas recortar margenes sobrantes, sigue este orden profesional:</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- Truco 1: Mascara PNG -->
+                    <div class="bg-darker/60 border border-[rgba(102,252,241,0.12)] p-4 rounded-xl space-y-2">
+                        <div class="text-primary font-semibold text-sm flex items-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 2l20 20"/><path d="M22 2L2 22"/></svg>
+                            <span data-es="Mascara de Mezcla" data-en="Blend Mask">Mascara de Mezcla</span>
+                        </div>
+                        <p class="text-xs text-lightc/60">
+                            <span data-es="En la camara añade el filtro" data-en="In the camera, add the Image/Blend Mask filter">En la camara añade el filtro</span> <b class="text-white" data-es="Imagen/Mascara de mezcla" data-en="Image Mask/Blend">Imagen/Mascara de mezcla</b> <span data-es="y selecciona la mascara PNG que descargaste (del mismo tamano). En" data-en="and select the PNG mask you downloaded (of the same size). In">y selecciona la mascara PNG que descargaste (del mismo tamano). En</span> <b class="text-white" data-es="Tipo" data-en="Type">Tipo</b> <span data-es="elige" data-en="choose">elige</span> <b class="text-primary" data-es="Mascara alfa (canal alfa)" data-en="Alpha mask (alpha channel)">Mascara alfa (canal alfa)</b> <span data-es="y en" data-en="and set">y en</span> <b class="text-white" data-es="Color" data-en="Color">Color</b> <span data-es="pon" data-en="to">pon</span> <b class="text-primary" data-es="blanco (#ffffff)" data-en="white (#ffffff)">blanco (#ffffff)</b> <span data-es=". Asi los bordes se recortan automaticamente con la forma de tu overlay." data-en=". This way, the edges are automatically cropped to the shape of your overlay.">. Asi los bordes se recortan automaticamente con la forma de tu overlay.</span>
+                        </p>
+                    </div>
+
+                    <!-- Truco 2: ALT Drag -->
+                    <div class="bg-darker/60 border border-[rgba(102,252,241,0.12)] p-4 rounded-xl space-y-2">
+                        <div class="text-primary font-semibold text-sm flex items-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                            <span data-es="Recorte Rapido (ALT)" data-en="Quick Crop (ALT)">Recorte Rapido (ALT)</span>
+                        </div>
+                        <p class="text-xs text-lightc/60">
+                            <span data-es="Selecciona tu camara en la vista previa, mantén" data-en="Select your camera in the preview, hold">Selecciona tu camara en la vista previa, mantén</span> <b class="text-white">ALT</b> <span data-es="y arrastra los controladores de los bordes (se pondran verdes). Permite recortar excedentes de forma inmediata." data-en="and drag the edge handles (they will turn green). Lets you crop excess footage right away.">y arrastra los controladores de los bordes (se pondran verdes). Permite recortar excedentes de forma inmediata.</span>
+                        </p>
+                    </div>
+
+                    <!-- Truco 3: Filtro Crop -->
+                    <div class="bg-darker/60 border border-[rgba(102,252,241,0.12)] p-4 rounded-xl space-y-2">
+                        <div class="text-primary font-semibold text-sm flex items-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2v4"/><path d="M18 22v-4"/><path d="M2 6h4"/><path d="M22 18h-4"/><rect x="6" y="6" width="12" height="12" rx="1"/></svg>
+                            <span data-es="Filtro Crop / Pad" data-en="Crop / Pad Filter">Filtro Crop / Pad</span>
+                        </div>
+                        <p class="text-xs text-lightc/60">
+                            <span data-es="Para precision numerica, clic derecho en tu camara" data-en="For numeric precision, right-click your camera">Para precision numerica, clic derecho en tu camara</span> &gt; <b class="text-white" data-es="Filtros" data-en="Filters">Filtros</b> &gt; <b class="text-white" data-es="Recortar/Pad (Crop/Pad)" data-en="Crop/Pad">Recortar/Pad (Crop/Pad)</b> <span data-es="y especifica cuantos pixeles sustraer de cada lado." data-en="and specify how many pixels to remove from each side.">y especifica cuantos pixeles sustraer de cada lado.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Pie -->
+        <div class="bg-darker/60 p-4 border-t border-[rgba(102,252,241,0.1)] text-center text-xs text-mutedc" data-es="OverlayGO! — Guia de configuracion rapida para OBS Studio" data-en="OverlayGO! — Quick setup guide for OBS Studio">OverlayGO! — Guia de configuracion rapida para OBS Studio</div>
+    </div>
+
+    <script>
+        (function () {
+            const LANG_COOKIE = 'techconchris_lang';
+
+            function getSharedLang() {
+                try {
+                    const m = document.cookie.match(/(?:^|;\s*)techconchris_lang=([^;]+)/);
+                    if (m && (m[1] === 'es' || m[1] === 'en')) return m[1];
+                } catch (err) {}
+                try {
+                    const l = localStorage.getItem('techconchris_lang');
+                    if (l === 'es' || l === 'en') return l;
+                } catch (err) {}
+                if (navigator.language && navigator.language.toLowerCase().startsWith('en')) return 'en';
+                return 'es';
+            }
+
+            function persistSharedLang(langVal) {
+                try { localStorage.setItem('techconchris_lang', langVal); } catch (err) {}
+                try {
+                    document.cookie = `${LANG_COOKIE}=${langVal}; Domain=.techconchris.com; Path=/; Max-Age=31536000; SameSite=Lax`;
+                } catch (err) {}
+            }
+
+            let lang = getSharedLang();
+
+            const de = document.getElementById('lang-es');
+            const dn = document.getElementById('lang-en');
+
+            function apply(l) {
+                lang = l;
+                persistSharedLang(l);
+                document.documentElement.lang = l;
+                document.querySelectorAll('[data-es][data-en]').forEach(el => {
+                    const val = el.getAttribute(l === 'en' ? 'data-en' : 'data-es');
+                    el.textContent = val;
+                });
+                function styleBtn(btn, active) {
+                    if (!btn) return;
+                    btn.style.color = active ? '#10161D' : '#C5C6C7';
+                    btn.style.background = active ? '#66FCF1' : 'transparent';
+                }
+                styleBtn(de, l === 'es');
+                styleBtn(dn, l === 'en');
+                document.querySelectorAll('.lang-label').forEach(el => { el.textContent = l.toUpperCase(); });
+            }
+
+            if (de) de.addEventListener('click', () => apply('es'));
+            if (dn) dn.addEventListener('click', () => apply('en'));
+
+            window.toggleLang = function () { apply(lang === 'es' ? 'en' : 'es'); };
+
+            apply(lang);
+        })();
+    </script>
+
+</body>
+</html>
